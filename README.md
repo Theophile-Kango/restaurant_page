@@ -8,7 +8,7 @@ The main goal of this project is to show the understanding of the benefits of mo
 
 # Screenshot
 
-![Home page](images/tictactoe.png)
+![Home page]()
 
 ## Live Demo
 
