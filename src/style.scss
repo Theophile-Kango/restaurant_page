@@ -1,13 +1,15 @@
 @import "~bootstrap/scss/bootstrap";
 
 html{
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 #content{
+  background: black;
   img{
     min-width: 100%;
     min-height: 100vh;
+    opacity: .5;
     object-fit: cover;
   }
 }

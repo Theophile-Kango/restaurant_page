@@ -4,4 +4,4 @@ const backgroundImg = () => {
     return myImage
 }
 
-export {backgroundImg}
+export { backgroundImg }
