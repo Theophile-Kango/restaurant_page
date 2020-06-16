@@ -12,17 +12,32 @@ html{
     opacity: .5;
     object-fit: cover;
   }
-  nav{  
+  nav{ 
+    background: #ccc;
+    padding: 0; 
+    height: 50px;
     ul{
       width: 100%;
+      height: 100%;
       display: flex;
-      justify-content: space-around;
-      color: white;
+      justify-content: space-around; 
+      align-items: center;
+      color: black;
       li{
         width: 80%;
-        text-align: center;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         cursor: pointer;
         text-transform: capitalize;
+        &:hover,
+        &:active{
+          background: black;
+          margin: 0 !important;
+          
+          color: #ccc;
+        }
       }
     }
   }
