@@ -1,11 +1,13 @@
 import _ from 'lodash';
 import './style.scss';
 import { backgroundImg } from './background.js'
-// import { appendElement } from './nav.js'
+import { appendItem } from './render.js'
 
 
 function component() {
   const background = backgroundImg();
+  const items = appendItem();
+  
   return background;
 }
   

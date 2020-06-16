@@ -1,24 +1,37 @@
 class Render{
-    constructor(num){
-        this.num = num;
+    constructor(element, parent){
+        this.element = element;
+        this.parent = parent;
     }
-    
-    appendElement(element, parent, classElement = '') {
-        const child = document.createElement(element);
-        parent.appendChild(child).className = classElement;
+
+    classElement(classElement = ''){
+        const child = document.createElement(this.element);
+        this.parent.appendChild(child).className = classElement;
         return child;
-    }
-    
-    repeat(element, parent, classElement = ''){
-        for(let i = 0; i < this.num; i++){
-            appendElement(element, parent, classElement = '');
-        }
     }
 }
 
-const nav = new Render(1).repeat('nav',content);
-const ul = new Render(1).repeat('ul',nav);
-const li = new Render(3).repeat('li',ul);
-//export { appendElement };
+const appendItem = () => {
+    const nav = new Render('nav',content).classElement('navbar navbar-expand-sm');
+    const ul = new Render('ul',nav).classElement('navbar-nav');
 
-const nav = new Nav(3).repeat();
+    const links = {
+        home: 'home',
+        menu: 'menu',
+        about: 'about us',
+        contacts: 'contacts'
+    }
+
+    const keys = Object.keys(links);
+    keys.forEach( element => {
+        element = new Render('li',ul).classElement('nav-item');
+    });
+    
+    const values = Object.values(links);
+
+    document.querySelectorAll('li').forEach( (element, i) => {
+        element.textContent = values[i];
+    })
+}
+
+export { appendItem };

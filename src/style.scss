@@ -12,4 +12,18 @@ html{
     opacity: .5;
     object-fit: cover;
   }
+  nav{  
+    ul{
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      color: white;
+      li{
+        width: 80%;
+        text-align: center;
+        cursor: pointer;
+        text-transform: capitalize;
+      }
+    }
+  }
 }
