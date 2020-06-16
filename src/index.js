@@ -1,21 +1,11 @@
 import _ from 'lodash';
 import './style.scss';
-//import Image from './restaurant.jpeg';
+import { backgroundImg } from './background.js'
+
 
 function component() {
-    const element = document.createElement('div');
+  const background = backgroundImg();
+  return background;
+}
   
-    // Lodash, currently included via a script, is required for this line to work
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-
-    //element.classList.add('hello');
-
-    //const myImage = new Image();
-    //myImage.src = Image;
-
-    //element.appendChild(myImage);
-  
-    return element;
-  }
-  
-  document.body.appendChild(component());
+content.appendChild(component());
