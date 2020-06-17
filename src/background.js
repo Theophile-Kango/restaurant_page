@@ -1,7 +1,7 @@
 const backgroundImg = () => {
-    const myImage = new Image();
-    myImage.src = 'src/assets/restaurant.jpeg';
-    return myImage
-}
+  const myImage = new Image();
+  myImage.src = 'src/assets/restaurant.jpeg';
+  return myImage;
+};
 
-export { backgroundImg }
+export default backgroundImg;

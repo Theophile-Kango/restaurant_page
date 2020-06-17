@@ -1,48 +1,56 @@
-import { Render } from './render.js';
-import { clickAbout, clickHome, clickContact, clickMenu } from './clikEvent.js';
+import Render from './render';
+import {
+  clickAbout, clickHome, clickContact, clickMenu,
+} from './clikEvent';
 
 
 const appendItem = () => {
-    const nav = new Render('nav',content).classElement('navbar navbar-expand-sm');
-    const ul = new Render('ul',nav).classElement('navbar-nav');
-    const elt = new Render('p',content).classElement('para');
+  const content = document.querySelector('#content');
+  const nav = new Render('nav', content).classElement('navbar navbar-expand-sm');
+  const ul = new Render('ul', nav).classElement('navbar-nav');
+  const elt = new Render('p', content).classElement('para');
 
-    const links = {
-        home: 'home',
-        menu: 'menu',
-        about: 'about us',
-        contacts: 'contacts'
-    }
+  const links = {
+    home: 'home',
+    menu: 'menu',
+    about: 'about us',
+    contacts: 'contacts',
+  };
 
-    const keys = Object.keys(links);
-    keys.forEach( element => {
-        element = new Render('li',ul).classElement('nav-item');
-    });
+  const keys = Object.keys(links);
+  keys.forEach(() => {
+    new Render('li', ul).classElement('nav-item');
+  });
 
-    ul.querySelectorAll('li').forEach( (element, i) => {
-        element.textContent = keys[i];
-        element.setAttribute('id', keys[i])
-    });
-    
-    onload = () => {
-        home.click();
-    }
+  ul.querySelectorAll('li').forEach((element, i) => {
+    element.textContent = keys[i];
+    element.setAttribute('id', keys[i]);
+  });
 
-    home.addEventListener('click',() => {
-        clickHome(elt);
-    });
+  const home = content.querySelector('#home');
+  const about = content.querySelector('#about');
+  const contacts = content.querySelector('#contacts');
+  const menu = content.querySelector('#menu');
 
-    about.addEventListener('click',() => {
-        clickAbout(elt);
-    });
+  window.onload = () => {
+    home.click();
+  };
 
-    contacts.addEventListener('click', () => {
-        clickContact(elt);
-    })
+  home.addEventListener('click', () => {
+    clickHome(elt);
+  });
 
-    menu.addEventListener('click', () => {
-        clickMenu(elt);
-    })
-}
+  about.addEventListener('click', () => {
+    clickAbout(elt);
+  });
 
-export { appendItem };
+  contacts.addEventListener('click', () => {
+    clickContact(elt);
+  });
+
+  menu.addEventListener('click', () => {
+    clickMenu(elt);
+  });
+};
+
+export default appendItem;

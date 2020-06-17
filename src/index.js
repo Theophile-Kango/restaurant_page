@@ -1,14 +1,14 @@
-import _ from 'lodash';
 import './style.scss';
-import { backgroundImg } from './background.js';
-import { appendItem } from './appendItem.js';
+import backgroundImg from './background';
+import appendItem from './appendItem';
 
 
 function component() {
   const background = backgroundImg();
-  const items = appendItem();
-  
+  appendItem();
+
   return background;
 }
-  
+
+const content = document.querySelector('#content');
 content.appendChild(component());
