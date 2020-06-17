@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import './style.scss';
-import { backgroundImg } from './background.js'
-import { appendItem } from './render.js'
+import { backgroundImg } from './background.js';
+import { appendItem } from './appendItem.js';
 
 
 function component() {
