@@ -3,7 +3,7 @@ const text = {
     kitchen from Sage Restaurant Group. Floating atop the landmark Meier & 
     Frank Building, Departure’s ambitious menu captivates diners with its 
     masterful remix of authentic coastal cuisines.`},
-    menu: [],
+    menu: 'src/assets/menu.jpg',
     about: function(){ return `Those are questions that your restaurant’s mission statement should answer.
 
     A restaurant’s mission, vision, and values make up part of your brand’s identity. 
@@ -37,4 +37,12 @@ const clickContact = (val) => {
     }
 }
 
-export { clickHome, clickAbout, clickContact };
+const clickMenu = (val) => {
+    const myImage = new Image();
+    myImage.src = text.menu;
+    val.textContent = ''
+    val.appendChild(myImage)
+    //return myImage
+}
+
+export { clickHome, clickAbout, clickContact, clickMenu };
