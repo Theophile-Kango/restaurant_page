@@ -41,8 +41,7 @@ const clickMenu = (val) => {
     const myImage = new Image();
     myImage.src = text.menu;
     val.textContent = ''
-    val.appendChild(myImage)
-    //return myImage
+    val.appendChild(myImage);
 }
 
 export { clickHome, clickAbout, clickContact, clickMenu };
