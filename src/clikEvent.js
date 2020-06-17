@@ -29,4 +29,12 @@ const clickAbout = (val) => {
     val.textContent = text.about();
 }
 
-export { clickHome, clickAbout };
+const clickContact = (val) => {
+    const entries = Object.entries(text.contact);
+    val.textContent = '';
+    for (const [key, value] of entries) {
+        val.innerHTML += `${key} : ${value} <br>`;
+    }
+}
+
+export { clickHome, clickAbout, clickContact };

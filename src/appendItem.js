@@ -1,5 +1,5 @@
 import { Render } from './render.js';
-import { clickAbout, clickHome } from './clikEvent.js';
+import { clickAbout, clickHome, clickContact } from './clikEvent.js';
 
 
 const appendItem = () => {
@@ -35,6 +35,10 @@ const appendItem = () => {
     about.addEventListener('click',() => {
         clickAbout(elt);
     });
+
+    contacts.addEventListener('click', () => {
+        clickContact(elt);
+    })
 }
 
 export { appendItem };
