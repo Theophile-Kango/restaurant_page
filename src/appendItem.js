@@ -23,9 +23,14 @@ const appendItem = () => {
     ul.querySelectorAll('li').forEach( (element, i) => {
         element.textContent = values[i];
         element.setAttribute('id', values[i])
-        element.addEventListener('click',() => {
-            clickEvent(element);
-        })
+    });
+    
+    onload = () => {
+        home.click();
+    }
+
+    home.addEventListener('click',() => {
+        clickEvent(home);
     })
 }
 
