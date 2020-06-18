@@ -1,7 +1,7 @@
 import Render from './render';
 import {
   clickAbout, clickHome, clickContact, clickMenu,
-} from './clikEvent';
+} from './clickEvent';
 
 
 const appendItem = () => {
