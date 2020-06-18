@@ -1,0 +1,72 @@
+@import "~bootstrap/scss/bootstrap";
+
+html {
+  overflow: hidden;
+}
+
+#content {
+  background: black;
+  display: flex;
+  flex-direction: column;
+
+  img {
+    min-width: 100%;
+    min-height: 100vh;
+    order: 1;
+    opacity: 0.3;
+    object-fit: cover;
+  }
+
+  nav {
+    background: #ccc;
+    padding: 0;
+    height: 50px;
+
+    ul {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      color: black;
+
+      li {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        text-transform: capitalize;
+
+        &:hover,
+        &:active {
+          background: black;
+          margin: 0 !important;
+          color: #ccc;
+        }
+      }
+    }
+  }
+
+  .para {
+    position: relative;
+    bottom: 600px;
+    order: 2;
+    color: white;
+    font-size: 1.2em;
+    line-height: 2em;
+    padding: 150px;
+
+    img {
+      position: relative;
+      bottom: 270px;
+      width: 250px;
+      opacity: 0.8;
+    }
+  }
+
+  .d-none {
+    display: none;
+  }
+}
